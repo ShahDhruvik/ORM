@@ -1,3 +1,5 @@
+import { SideBarType } from '@/types/common.types'
+
 //------------------Enums--------------------
 export enum ResponseStatus {
     RS200 = 200,
@@ -8,20 +10,36 @@ export enum ResponseStatus {
     RS500 = 500,
 }
 export enum Dropdowns {
-    User = "User",
+    User = 'User',
+}
+export const enum SideBarItemNames {
+    TheOrderManagement = 'The Order Management',
+    PrescriptionOrders = "Prescription Orders"
+}
+export const enum SideBarItemChildNames {
+    TheOrderManagement = 'The Order Management',
 }
 
 //-------------------Data------------------------
 export const selectDefaultValue = {
-    _id: "00",
-    label: 'Select'
+    _id: '00',
+    label: 'Select',
 }
 export const selectAllDefaultValue = {
-    _id: "00",
-    label: 'All'
+    _id: '00',
+    label: 'All',
 }
 
 export const tooltipLength = 20
+
+export const sideBarData: SideBarType = [
+    {
+        itemName: SideBarItemNames.TheOrderManagement,
+    },
+    {
+        itemName: SideBarItemNames.PrescriptionOrders,
+    },
+]
 
 //---------Functions----------------------
 export const splitDescription = (description: string, length?: number) => {

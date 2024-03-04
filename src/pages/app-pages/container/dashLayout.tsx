@@ -1,13 +1,15 @@
+import Header from '@/components/Header'
+
 type Props = {
   children: any
 }
 
 const DashBoardLayout = ({ children }: Props) => {
   return (
-    <div>
-      <p>Header</p>
-      {children}
-    </div>
+    <section>
+      <Header />
+      <div className='p-3'>{children}</div>
+    </section>
   )
 }
 
